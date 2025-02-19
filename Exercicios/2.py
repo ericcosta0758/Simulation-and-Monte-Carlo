@@ -3,7 +3,7 @@ import math
 import matplotlib.pyplot as plt
 
 n_observações = 1000
-n_amostras = 50
+n_amostras = 100
 Amostra = []
 lista_max = []
 
@@ -21,12 +21,12 @@ for i in range(n_amostras):
         lista_observacoes.append(x)
     Amostra.append(lista_observacoes)
 
-for observacoes in Amostra:
-    lista_max.append(np.max(observacoes))
+for i in Amostra:
+    lista_max.append(np.max(i))
 
 Esperanca_max = sum(lista_max) / n_amostras
 
-print(f"a) = {Esperanca_max}")
+print(f"a = {Esperanca_max}")
 
 sigma = 1
 n_iterado = range(1, 1001)
