@@ -22,4 +22,5 @@ Overall, the script compares both curves to check if the theoretical and the emp
 The results will change every time the code runs. After all, it is based on random numbers. But below is an example of output:
 
 a = 3.294166288071397
-And the image exercise 2.png
+
+(images\image exercise 2.png)
