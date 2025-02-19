@@ -3,7 +3,7 @@ import math
 import matplotlib.pyplot as plt
 
 n_observações = 1000
-n_amostras = 1000
+n_amostras = 100
 Amostra = []
 lista_max = []
 
@@ -21,21 +21,12 @@ for i in range(n_amostras):
         lista_observacoes.append(x)
     Amostra.append(lista_observacoes)
 
-for i in range(n_amostras):
-    mudou = True
-    while mudou:
-        mudou = False
-        for j in range(1, n_observações):
-            if Amostra[i][j - 1] > Amostra[i][j]:
-                Amostra[i][j - 1], Amostra[i][j] = Amostra[i][j], Amostra[i][j - 1]
-                mudou = True
-
 for i in Amostra:
-    lista_max.append(i[-1])
+    lista_max.append(np.max(i))
 
 Esperanca_max = sum(lista_max) / n_amostras
 
-print(f"a) = {Esperanca_max}")
+print(f"a = {Esperanca_max}")
 
 sigma = 1
 n_iterado = range(1, 1001)
@@ -51,9 +42,8 @@ for n in n_iterado:
     curva_empirica_maxima.append(sum(valores_maximos) / n_amostras)
 
 plt.figure(figsize=(10, 6))
-plt.plot(n_iterado, curva_empirica_maxima, label=r"Empírica", color="blue")
-plt.plot(n_iterado, curva, label=r"Teórica", linestyle="dashed", color="red")
-
+plt.plot(n_iterado, curva_empirica_maxima, label="Empírica", color="blue")
+plt.plot(n_iterado, curva, label="Teórica", linestyle="dashed", color="red")
 plt.xlabel("n")
 plt.ylabel("Expectativa Máxima")
 plt.title("Comparação entre Expectativa Máxima Empírica e Teórica")
