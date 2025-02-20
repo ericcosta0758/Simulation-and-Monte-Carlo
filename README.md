@@ -1,13 +1,9 @@
 # Simulation-and-Monte-Carlo
 
 Project made by three student of "Universidade Federal de São Carlos" in the discipline Statistical Programming, teached by Thiago Rodrigo Ramos
-
 i. Eric Trevelato Costa / R.A.: 820669
-
 ii. Elói Beijamim da Silva / R.A.:822336
-
 iii. João Pedro Pirola / R.A.: 800831
-
 
 ## Introduction
 
@@ -21,22 +17,42 @@ available in Python that would make all the methodology present in the solutions
   The idea here was to show the similarity of the distributions of the maximum of two independent uniform variables with support between 0 and 1 and the square root 
 of another of those independent variables:
 
-P(Z ≤ t) = P(√X₃ ≤ t) = P(X₃ ≤ t²)  
-      (by squaring both sides)  
-      = t²                   (since for U ~ Unif(0,1), P(U ≤ u) = u)
+- First, we get that: <br>
 
-Additionally,
+$$
+P(Z \leq t) = P(\sqrt{X_3} \leq t) = P(X_3 \leq t^2) \ \text{(elevating both sides by 2)}
+$$
 
-P(max(X₁, X₂) ≤ t) = P(X₁ ≤ t, X₂ ≤ t)  
-      (maximum less than t means that the entire sample is less than t)  
-      = P(X₁ ≤ t) · P(X₂ ≤ t)   (by independence)  
-      = t².
-        
-- Then, what is done is generate two samples based on that distribution, as they have the same one, via inversion method and compare the results with the histogram shown in the image Hist_max_raiz (images can be found in the folder images)
+
+
+$$
+\qquad \qquad \qquad \qquad \quad \quad \ = t^2 \  \text{(} \ P(U \leq u\text{)} \ , U \sim Unif]0,1[ \ \text{, is u)}.
+$$
+
+
+
+  Additionally,
+
+$$
+\quad P(max(X_1, X_2) \leq t) = P(X_1 \leq t, X_2 \leq t) \ \text{(maximum lower than t means that the entire sample is lower than t)}
+$$
+
+
+$\qquad \qquad \qquad \qquad \qquad \qquad \quad \ \ \ = P(X_1 \leq t)P(X_2 \leq t) \ \text{(independence)}$
+
+
+$\qquad \qquad \qquad \qquad \qquad \qquad \quad \ \ \ = t^2  \ \text{;}$
+
+  
+- Then, what is done is generate two samples based on that distribution, as they have the same one, via inversion method and compare the results with the histogram:
+
+  (images\Hist_max_raiz.png)
 
   This is an illustration of how similar the distributions are.
 
-- At last, we calculate an empyrical CDF based on the simulations and compare it with the analytical one we obtained with the manipulations of the probabilities. The results are shown in the image Graf_ac_analit_empir (images can be found in the folder images)
+- At last, we calculate an empyrical CDF based on the simulations and compare it with the analytical one we obtained with the manipulations of the probabilities. The results are shown in the subsequent plot:
+
+  (images\Graf_ac_analit_empir.png)
 
   This shows that, if we try to approximate the analytical (or "real") CDF of the distribution of the variables in question, it will be quite similar to what we obtained analytically, so our simulations worked just as expected.
 
@@ -62,7 +78,7 @@ The results will change every time the code runs. After all, it is based on rand
 
 a = 3.294166288071397
 
-image exercise 2 (images can be found in the folder images)
+(images\image exercise 2.png)
 
 
 #
@@ -73,7 +89,9 @@ image exercise 2 (images can be found in the folder images)
   The question proposed has the purpose of illustrating the result shown in the exercise's statement by the use of an example, where we use the minimum of
 three exponentially distributed random variables with specific parameters 1, 2 and 3.
 
-  With that said, all that we had to do was simulate 1000 observations of the minimum's distribution via Inversion Method and compare it with the curve obtained analytically by creating the histogram (with y-axis being the **density**) shown in the image Hist_min_exp (images can be found in the folder images)
+  With that said, all that we had to do was simulate 1000 observations of the minimum's distribution via Inversion Method and compare it with the curve obtained analytically by creating the histogram (with y-axis being the **density**) shown below:
+
+(images\Hist_min_exp_.png)
 
   By looking at the figure, there's perceptible empyrical evidence that the data simulated by the method is likely to follow the distribution illustrated by the curve. Then, we have a good illustration of the result we got at the start.
 
@@ -109,7 +127,7 @@ We then determine the minimum y value and its position to obtain the correspondi
 
 Next, we plot the values in the interval [-3,5], highlighting the minimum point found.
 
-It can be seen in the file image exercise 5 (images can be found in the folder images)
+(images\image exercise 5.png)
 
 Finally, we obtain the derivative of f(x) and set it to zero to compare both results:
 
