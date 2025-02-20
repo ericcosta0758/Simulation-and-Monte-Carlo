@@ -49,3 +49,43 @@ a = 3.294166288071397
 
 (images\image exercise 2.png)
 
+
+
+
+
+Exercise 4:
+
+The first step is to create a function that receives a list and shuffles its elements to randomly assign doors with prizes using a uniform distribution. To achieve this, we generate three random numbers from a uniform distribution, store them in a list, use the zip function to link each element of the input list with the generated numbers, and then apply the sort function based on these random numbers. The function returns the original list rearranged according to the sorting order. This method ensures that the list elements are randomly shuffled using a uniform distribution.
+
+Next, we create a function that randomly assigns doors and prizes, simulates the participant’s random choice, and receives a boolean argument that determines whether the player will stick to their initial choice after the revelation of one of the losing options. This allows us to simulate both scenarios. The function also considers the number of simulations performed. If the participant wins, the result is recorded as 1; otherwise, it is recorded as 0.
+
+Following this, we run 10,000 simulations for both cases—maintaining and changing the initial choice. We then calculate the winning proportions for each scenario.
+
+Based on the results obtained, it is statistically more advantageous to switch the choice after one of the losing options is revealed. This outcome aligns with Bayesian Statistics theory, where posterior probabilities are updated when additional information is provided. For further details and a mathematical proof of the problem using Bayes' Theorem, refer to pages 4 and 5 of the document available at "https://saepro.ufv.br/wp-content/uploads/2015/06/2014.13.pdf".
+
+
+Exercise 5:
+
+The first step is to implement the function f(x) in the code.
+
+Next, before proceeding with the steps of item 3, we implement a function to generate values from a normal distribution with mean x_t and standard deviation sigma using the Box-Muller method.
+
+Following this, we implement a function to calculate the values of x' and x_t from step 3.
+
+Choosing the initial value x0 = -3 and applying the function, we generate x values using the function created above and calculate the corresponding f(x) = y value for each point.
+
+We then determine the minimum y value and its position to obtain the corresponding x value.
+
+Next, we plot the values in the interval [-3,5], highlighting the minimum point found.
+
+(images\image exercise 5.png)
+
+Finally, we obtain the derivative of f(x) and set it to zero to compare both results:
+
+Differentiating:
+f'(x) = 4x³ - 12x² - 4x - 1
+
+Setting it to zero and solving:
+4x³ - 12x² - 4x - 1 = 0
+
+Using a cubic equation solver, we find an approximate x value of 3.3235. Therefore, both the simulation and analytical results yield approximately the same outcome.
