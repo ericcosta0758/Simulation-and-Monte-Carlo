@@ -1,5 +1,9 @@
 # Simulation-and-Monte-Carlo
 
+Project made by three student of "Universidade Federal de São Carlos" in the discipline Statistical Programming, teached by Thiago Rodrigo Ramos
+i. Eric Trevelato Costa / R.A.: 820669
+ii. Elói Beijamim da Silva / R.A.:822336
+iii. João Pedro Pirola / R.A.: 800831
 
 ## Introduction
 
