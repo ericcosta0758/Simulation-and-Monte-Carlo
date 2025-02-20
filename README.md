@@ -21,15 +21,16 @@ available in Python that would make all the methodology present in the solutions
   The idea here was to show the similarity of the distributions of the maximum of two independent uniform variables with support between 0 and 1 and the square root 
 of another of those independent variables:
 
-First, we get that:
-    P(Z <= t) = P(sqrt(X_3) <= t) = P(X_3 <= t²) (elevating both sides by 2)
-                                  = t² (P(U <= u), U ~ Unif]0,1[, is u).
+P(Z ≤ t) = P(√X₃ ≤ t) = P(X₃ ≤ t²)  
+      (by squaring both sides)  
+      = t²                   (since for U ~ Unif(0,1), P(U ≤ u) = u)
 
-  Additionally, 
-    
-    P(max(X_1, X_2) <= t) = P(X_1 <= t, X_2 <= t) (maximum lower than t means that the entire sample is lower than t)
-                          = P(X_1 <= t)P(X_2 <= t) (independence)
-                          = t²;
+Additionally,
+
+P(max(X₁, X₂) ≤ t) = P(X₁ ≤ t, X₂ ≤ t)  
+      (maximum less than t means that the entire sample is less than t)  
+      = P(X₁ ≤ t) · P(X₂ ≤ t)   (by independence)  
+      = t².
         
 - Then, what is done is generate two samples based on that distribution, as they have the same one, via inversion method and compare the results with the histogram shown in the image Hist_max_raiz (images can be found in the folder images)
 
