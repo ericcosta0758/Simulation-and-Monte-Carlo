@@ -8,7 +8,7 @@ classes of the discipline throughout the semester. With that in mind, most of th
 available in Python that would make all the methodology present in the solutions entirely implicit.
   
 
-Exercise 1:
+## Exercise 1:
 
   The idea here was to show the similarity of the distributions of the maximum of two independent uniform variables with support between 0 and 1 and the square root 
 of another of those independent variables:
@@ -23,13 +23,23 @@ of another of those independent variables:
                           = P(X_1 <= t)P(X_2 <= t) (independence)
                           = t²;
         
-  Then, what is done is generate two samples based on that distribution, as they have the same one, via inversion method and compare the results with the histogram:
+- Then, what is done is generate two samples based on that distribution, as they have the same one, via inversion method and compare the results with the histogram:
+
+(images\Hist_max_raiz.png)
+
+  This is an illustration of how similar the distributions are.
+
+- At last, we calculate an empyrical CDF based on the simulations and compare it with the analytical one we obtained with the manipulations of the probabilities. The results are shown in the subsequent plot:
+
+(images\Graf_ac_analit_empir.png)
+
+  This shows that, if we try to approximate the analytical (or "real") CDF of the distribution of the variables in question, it will be quite similar to what we obtained analytically, so our simulations worked just as expected.
+
+
 #  
 
 
-
-
-Exercise 2:
+## Exercise 2:
 
 This code performs a simulation to analyze the behavior of the maximum value in samples drawn from a normal distribution. It consists of two main parts:
 i -  Empirical Maximum Calculation:
@@ -48,4 +58,24 @@ The results will change every time the code runs. After all, it is based on rand
 a = 3.294166288071397
 
 (images\image exercise 2.png)
+
+
+
+#
+
+
+## Exercise 3:
+
+  The question proposed has the purpose of illustrating the result shown in the exercise's statement by the use of an example, where we use the minimum of
+three exponentially distributed random variables with specific parameters 1, 2 and 3.
+
+  With that said, all that we had to do was simulate 1000 observations of the minimum's distribution via Inversion Method and compare it with the curve obtained analytically by creating the histogram (with y-axis being the **density**) shown below:
+
+(images\Hist_min_exp_.png)
+
+  By looking at the figure, there's perceptible empyrical evidence that the data simulated by the method is likely to follow the distribution illustrated by the curve. Then, we have a good illustration of the result we got at the start.
+
+
+
+#
 
