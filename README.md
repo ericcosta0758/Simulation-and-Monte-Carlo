@@ -21,16 +21,30 @@ available in Python that would make all the methodology present in the solutions
   The idea here was to show the similarity of the distributions of the maximum of two independent uniform variables with support between 0 and 1 and the square root 
 of another of those independent variables:
 
-P(Z ≤ t) = P(√X₃ ≤ t) = P(X₃ ≤ t²)  
-      (by squaring both sides)  
-      = t²                   (since for U ~ Unif(0,1), P(U ≤ u) = u)
+- First, we get that: <br>
 
-Additionally,
+$$
+P(Z \leq t) = P(\sqrt{X_3} \leq t) = P(X_3 \leq t^2) \ \text{(elevating both sides by 2)}
+$$
 
-P(max(X₁, X₂) ≤ t) = P(X₁ ≤ t, X₂ ≤ t)  
-      (maximum less than t means that the entire sample is less than t)  
-      = P(X₁ ≤ t) · P(X₂ ≤ t)   (by independence)  
-      = t².
+
+$$
+\qquad \qquad \qquad \qquad \quad \quad \ = t^2 \  \text{(} \ P(U \leq u\text{)} \ , U \sim Unif]0,1[ \ \text{, is u)}.
+$$
+
+  Additionally,
+
+
+$$
+\quad P(max(X_1, X_2) \leq t) = P(X_1 \leq t, X_2 \leq t) \ \text{(maximum lower than t means that the entire sample is lower than t)}
+$$
+
+
+$\qquad \qquad \qquad \qquad \qquad \qquad \quad \ \ \ = P(X_1 \leq t)P(X_2 \leq t) \ \text{(independence)}$
+
+
+$\qquad \qquad \qquad \qquad \qquad \qquad \quad \ \ \ = t^2  \ \text{;}$
+
         
 - Then, what is done is generate two samples based on that distribution, as they have the same one, via inversion method and compare the results with the histogram shown in the image Hist_max_raiz (images can be found in the folder images)
 
