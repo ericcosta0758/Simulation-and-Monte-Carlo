@@ -31,11 +31,11 @@ First, we get that:
                           = P(X_1 <= t)P(X_2 <= t) (independence)
                           = t²;
         
-- Then, what is done is generate two samples based on that distribution, as they have the same one, via inversion method and compare the results with the histogram shown in the image Hist_max_raiz (images can be found in the foulder images)
+- Then, what is done is generate two samples based on that distribution, as they have the same one, via inversion method and compare the results with the histogram shown in the image Hist_max_raiz (images can be found in the folder images)
 
   This is an illustration of how similar the distributions are.
 
-- At last, we calculate an empyrical CDF based on the simulations and compare it with the analytical one we obtained with the manipulations of the probabilities. The results are shown in the image Graf_ac_analit_empir (images can be found in the foulder images)
+- At last, we calculate an empyrical CDF based on the simulations and compare it with the analytical one we obtained with the manipulations of the probabilities. The results are shown in the image Graf_ac_analit_empir (images can be found in the folder images)
 
   This shows that, if we try to approximate the analytical (or "real") CDF of the distribution of the variables in question, it will be quite similar to what we obtained analytically, so our simulations worked just as expected.
 
@@ -61,7 +61,7 @@ The results will change every time the code runs. After all, it is based on rand
 
 a = 3.294166288071397
 
-image exercise 2 (images can be found in the foulder images)
+image exercise 2 (images can be found in the folder images)
 
 
 #
@@ -72,7 +72,7 @@ image exercise 2 (images can be found in the foulder images)
   The question proposed has the purpose of illustrating the result shown in the exercise's statement by the use of an example, where we use the minimum of
 three exponentially distributed random variables with specific parameters 1, 2 and 3.
 
-  With that said, all that we had to do was simulate 1000 observations of the minimum's distribution via Inversion Method and compare it with the curve obtained analytically by creating the histogram (with y-axis being the **density**) shown in the image Hist_min_exp (images can be found in the foulder images)
+  With that said, all that we had to do was simulate 1000 observations of the minimum's distribution via Inversion Method and compare it with the curve obtained analytically by creating the histogram (with y-axis being the **density**) shown in the image Hist_min_exp (images can be found in the folder images)
 
   By looking at the figure, there's perceptible empyrical evidence that the data simulated by the method is likely to follow the distribution illustrated by the curve. Then, we have a good illustration of the result we got at the start.
 
@@ -108,7 +108,7 @@ We then determine the minimum y value and its position to obtain the correspondi
 
 Next, we plot the values in the interval [-3,5], highlighting the minimum point found.
 
-It can be seen in the file image exercise 5 (images can be found in the foulder images)
+It can be seen in the file image exercise 5 (images can be found in the folder images)
 
 Finally, we obtain the derivative of f(x) and set it to zero to compare both results:
 
